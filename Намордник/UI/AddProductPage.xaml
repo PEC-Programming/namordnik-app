@@ -1,0 +1,61 @@
+﻿<Page x:Class="Намордник.UI.AddProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Намордник.UI"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddProductPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Orientation="Vertical">
+            <DockPanel Margin="5">
+                <TextBlock DockPanel.Dock="Left" MinWidth="200" Text="Артикул"/>
+                <TextBox DockPanel.Dock="Right"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Наименование" DockPanel.Dock="Left" MinWidth="200"/>
+                <TextBox DockPanel.Dock="Right"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Тип продукта" DockPanel.Dock="Left" MinWidth="200"/>
+                <ComboBox DockPanel.Dock="Right"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Изображение" DockPanel.Dock="Left" MinWidth="200"/>
+                <TextBox DockPanel.Dock="Right"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Кол-во человек для производства" DockPanel.Dock="Left" MinWidth="200"/>
+                <TextBox DockPanel.Dock="Right"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Номер цеха" DockPanel.Dock="Left" MinWidth="200"/>
+                <TextBox DockPanel.Dock="Right"/>
+            </DockPanel>
+            <DockPanel  Margin="5">
+                <TextBlock Text="Мин. стоимость для агента" DockPanel.Dock="Left" MinWidth="200"/>
+                <TextBox DockPanel.Dock="Right"/>
+            </DockPanel>
+            <DockPanel Margin="5">
+                <TextBlock Text="Описание" DockPanel.Dock="Left" MinWidth="200"/>
+                <RichTextBox DockPanel.Dock="Right"/>
+            </DockPanel>
+            <Button x:Name="BtnAddProduct" Margin="5" Content="Добавить продукцию" Click="BtnAddProduct_Click"/>
+        </StackPanel>
+        <Button x:Name="BtnBack" Grid.Row="2" Grid.Column="2" Margin="5" Content="Назад" Click="BtnBack_Click"/>
+    </Grid>
+</Page>
